@@ -32,7 +32,144 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+.navbar {
+  /* flex-direction: center; */
+  background-color: rgba(40, 40, 169, 0.81);
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+
+}
+
+.banner-card {
+  height: 90vh;
+  width: 100vw;
+  position: relative;
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  color: white;
+}
+
+.banner-img {
+  height: 90vh;
+  width: 100vw;
+  /* margin-top: 1vh;
+  margin-bottom: 3vh;
+  color: white; */
+}
+
+.banner-title {
+  position: absolute;
+  top: 25vh;
+  left: 4vw;
+  font-size: 4rem;
+}
+
+.banner-text {
+  height: 10rem;
+  font-size: 1.3rem;
+  overflow: hidden;
+  position: absolute;
+  top: 38vh;
+  left: 4vw;
+  margin-right: 55vw;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+.movie-card {
+  width: 20vw;
+  margin-top: 1rem;
+  /* margin-bottom: 3vh; */
+  color: white;
+  position: relative;
+}
+
+.movie-title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.movie-button {
+  position: absolute;
+  bottom: 3rem;
+}
+
+.favourites-generes {
+  padding: 3rem;
+}
+
+.favourites-table {
+  padding: 3rem;
+}
+
+ @media screen and (max-width:400px) {
+  .banner-card {
+    height: 30vh;
+    /* width: 100vw;
+    position: relative;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    color: white; */
+  }
+
+  .banner-img {
+    height: 30vh;
+    /* width: 100vw; */
+    /* margin-top: 1vh;
+    margin-bottom: 3vh;
+    color: white; */
+  }
+
+  .banner-title {
+    /* position: absolute; */
+    top: 5vh;
+    left: 4vw;
+    font-size: 1.5rem;
+  }
+
+  .banner-text {
+    height: 10rem;
+    font-size: .7rem;
+    overflow: hidden;
+    position: absolute;
+    top: 11vh;
+    left: 4vw;
+    margin-right: 40vw;
+  }
+
+  .movie-card {
+    /* height: 15vh; */
+    width: 45vw;
+    margin: 0.1rem;
+    background-color: red;
+  }
+
+  .movie-img {
+    height: 30vw;
+    width: 45vw;
+
+  }
+
+  .movie-title {
+    font-size: medium;
+  }
+
+  .movie-button{
+    height: 25%;
+    width: 80%;
+    font-size: .9rem;
+  }
+} 

@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.css'
+import Navbar from './Components/Navbar'
+import Banner from './Components/Banner'
+import Movies from './Components/Movies'
+import Favourites from './Components/Favourites'
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Component } from 'react'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        {/* <Route path='/'  render={(props) => 
+          <>
+            <Banner {...props} />
+            <Movies {...props} />
+          </>
+        } /> */}
+        <Route path='/' element={<><Banner/><Movies/></> } />
+        <Route path='/favourites' element={<Favourites/>} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
+// <ReturnRoute path="/" componenet={</C>}/>
+// function ReturnRoute({Component:component, ...rest}) {
+//   return (
+//    <Route {...rest} render={(props)=> {
+//       return (
+//         <Component {...props}/>
+//       )
+//    }}></Route>
+//   )
+// }
